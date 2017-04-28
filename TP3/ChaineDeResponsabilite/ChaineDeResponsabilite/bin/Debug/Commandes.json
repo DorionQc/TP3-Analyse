@@ -1,0 +1,112 @@
+# Ingredient Ajouter "Nom"
+# Ingredient Enlever "Nom"
+# Ingredient Renommer "Nom" "NouveauNom"
+# Ingredient Liste
+
+# Recette Ajouter "Nom" Ingredient ### "Nom":Quantite "Nom":Quantite ...
+# Recette Modifier "Nom" Ajouter "Nom":Quantite "Nom":Quantite
+# Recette Modifier "Nom" Enlever "Nom":Quantite "Nom":Quantite
+# Recette Enlever "Nom"
+# Recette Renommer "Nom" "NouveauNom"
+# Recette Liste
+# Recette Afficher "Nom"
+
+{
+	"Commandes":
+	[
+		{
+			"Nom": "Ingredient",
+			"SubCommande" : [
+				{
+					"Nom": "Ajouter",
+					"Params": [
+						{
+							"Nom": "Nom",
+							"Type": "string",
+							"Join": null
+						}
+					]
+				},
+				{
+					"Nom": "Enlever",
+					"Params": [
+						{
+							"Nom": "Nom",
+							"Type": "string",
+							"Join": null
+						}
+					]
+				},
+				{
+					"Nom": "Liste",
+					"Params": []
+				},
+				{
+					"Nom": "Renommer",
+					"Params": [
+						{
+							"Nom": "Nom",
+							"Type": "string",
+							"Join": null
+						},
+						{
+							"Nom": "NouveauNom",
+							"Type": "string",
+							"Join": null
+						}
+					]
+				}
+			]
+		},
+		{
+			"Nom": "Recette",
+			"SubCommande" : [
+				{
+					"Nom": "Renommer",
+					"Params": [
+						{
+							"Nom": "Nom",
+							"Type": "string",
+							"Join": null
+						},
+						{
+							"Nom": "NouveauNom",
+							"Type": "string",
+							"Join": null
+						}
+					]
+				},
+				{
+					"Nom": "Liste",
+					"Params": []
+				},
+				{
+					"Nom": "Ajouter",
+					"Params": [
+						{
+							"Nom": "Nom",
+							"Type": "string",
+							"Join": null
+						}
+					]
+				},
+				{
+					"Nom": "Enlever",
+					"Params": [
+						{
+							"Nom": "Nom",
+							"Type": "string",
+							"Join": null
+						}
+					]
+				},
+				{
+					
+				},
+				{
+				
+				}
+			]
+		}
+	]
+}

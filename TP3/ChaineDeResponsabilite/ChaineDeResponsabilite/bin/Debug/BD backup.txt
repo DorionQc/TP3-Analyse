@@ -1,0 +1,160 @@
+{
+    "Ingredients":
+    [
+        {"$id":"13" , "Nom":"Cacao"             },
+        {"$id":"1"  , "Nom":"Huile"             },
+        {"$id":"2"  , "Nom":"Beurre"            },
+        {"$id":"3"  , "Nom":"Lait"              },
+        {"$id":"4"  , "Nom":"Sucre"             },
+        {"$id":"5"  , "Nom":"Creme"             },
+        {"$id":"6"  , "Nom":"Chocolat blanc"    },
+        {"$id":"7"  , "Nom":"Chocolat au lait"  },
+        {"$id":"8"  , "Nom":"Chocolat belge"    },
+        {"$id":"9"  , "Nom":"Caramel"           },
+        {"$id":"10" , "Nom":"Erable"            },
+        {"$id":"11" , "Nom":"Miel"              },
+        {"$id":"12" , "Nom":"Coconut"           }
+    ],
+    "Recettes":
+    [
+	
+		{
+			"$id": "112",
+            "Nom":"Caramel enrobe de chocolat",
+			"Next": {},
+            "Ingredients":
+            [
+                {"Ingredient":{"$ref":"9"}, "Quantite":250},
+                {"Ingredient":{"$ref":"7"}, "Quantite":250}
+            ]
+        },
+		{
+			"$id": "111",
+            "Nom":"Macaron au chocolat",
+			"Next": {"$ref": "112"},
+            "Ingredients":
+            [
+                {"Ingredient":{"$ref":"7"}, "Quantite":300},
+                {"Ingredient":{"$ref":"12"}, "Quantite":100}
+            ]
+        },
+		{
+			"$id": "110",
+			"Nom":"Oeuf coulant",
+			"Next": {"$ref": "111"},
+            "Ingredients":
+            [
+                {"Ingredient":{"$ref":"4"}, "Quantite":750},
+                {"Ingredient":{"$ref":"4"}, "Quantite":750},
+                {"Ingredient":{"$ref":"9"}, "Quantite":100}
+            ]
+        },
+		{
+			"$id": "109",
+			"Nom":"Chocolat a l'erable",
+			"Next": {"$ref": "110"},
+            "Ingredients":
+            [
+                {"Ingredient":{"$ref":"7"}, "Quantite":250},
+                {"Ingredient":{"$ref":"10"}, "Quantite":100}
+            ]
+        },
+		{
+			"$id": "108",
+			"Nom":"Chocolat au miel",
+			"Next": {"$ref": "109"},
+            "Ingredients":
+            [
+                {"Ingredient":{"$ref":"7"}, "Quantite":250},
+                {"Ingredient":{"$ref":"11"}, "Quantite":100}
+            ]
+        },
+		{
+			"$id": "107",
+			"Nom":"Chocolat au caramel",
+			"Next": {"$ref": "108"},
+            "Ingredients":
+            [
+                {"Ingredient":{"$ref":"7"}, "Quantite":250},
+                {"Ingredient":{"$ref":"9"}, "Quantite":150}
+            ]
+        },
+		{
+			"$id": "106",
+			"Nom":"Pepittes de chocolat",
+			"Next": {"$ref": "107"},
+            "Ingredients":
+            [
+                {"Ingredient":{"$ref":"7"}, "Quantite":750},
+                {"Ingredient":{"$ref":"3"}, "Quantite":250},
+                {"Ingredient":{"$ref":"2"}, "Quantite":100}
+            ]
+        },
+		{
+			"$id": "105",
+			"Nom":"Lait au chocolat",
+			"Next": {"$ref": "106"},
+            "Ingredients":
+            [
+                {"Ingredient":{"$ref":"3"}, "Quantite":750},
+                {"Ingredient":{"$ref":"7"}, "Quantite":150}
+            ]
+        },
+		{
+			"$id": "104",
+			"Nom":"Fondue au chocolat",
+			"Next": {"$ref": "105"},
+            "Ingredients":
+            [
+                {"Ingredient":{"$ref":"7"}, "Quantite":500}
+            ]
+        },
+		{
+			"$id": "103",
+			"Nom":"Chocolat suisse",
+			"Next": {"$ref": "104"},
+            "Ingredients":
+            [
+                {"Ingredient":{"$ref":"8"}, "Quantite":500},
+                {"Ingredient":{"$ref":"4"}, "Quantite":250},
+                {"Ingredient":{"$ref":"3"}, "Quantite":150}
+            ]
+        },
+        {
+			"$id": "102",
+			"Nom":"Chocolat belge",
+			"Next": {"$ref": "103"},
+            "Ingredients":
+            [
+                {"Ingredient":{"$ref":"8"}, "Quantite":500},
+                {"Ingredient":{"$ref":"4"}, "Quantite":250},
+                {"Ingredient":{"$ref":"3"}, "Quantite":150}
+            ]
+        },
+        {
+			"$id": "101",
+			"Nom":"Chocolat au lait",
+			"Next": {"$ref": "102"},
+            "Ingredients":
+            [
+                {"Ingredient":{"$ref":"7"}, "Quantite":500},
+                {"Ingredient":{"$ref":"3"}, "Quantite":200},
+                {"Ingredient":{"$ref":"4"}, "Quantite":200}
+            ]
+        },
+		{
+			"$id": "100",
+			"Nom":"Chocolat blanc",
+			"Next": {"$ref": "101"},
+            "Ingredients":
+            [
+                {"Ingredient":{"$ref":"2"}, "Quantite":100}, 
+                {"Ingredient":{"$ref":"1"}, "Quantite":200}, 
+                {"Ingredient":{"$ref":"6"}, "Quantite":500}, 
+                {"Ingredient":{"$ref":"7"}, "Quantite":250}
+            ] 
+        }
+    ],
+	"Premier": {"$ref":"100"},
+	"Dernier": {"$ref":"112"}
+}
